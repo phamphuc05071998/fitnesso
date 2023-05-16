@@ -1,0 +1,146 @@
+@import "./../../components/sass/abtracts/variables";
+@import "./../../components/sass/abtracts/mixins";
+.header {
+  background-color: $color-white;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 145rem;
+  width: 95%;
+  align-items: center;
+  @include respond(tab-port) {
+  }
+  &Opener {
+    padding: 2rem 1.5rem;
+    display: none;
+    visibility: hidden;
+    margin-left: auto;
+    z-index: 2;
+    background-color: $color-white;
+    &.clicked {
+      background-color: $color-primary;
+    }
+    @include respond(tab-port) {
+      display: block;
+      visibility: visible;
+    }
+  }
+  &Open {
+    // display: none;
+    // visibility: hidden;
+    height: 2.5px;
+    width: 2rem;
+    background-color: $color-primary;
+    position: relative;
+    display: block;
+    color: $color-primary;
+    cursor: pointer;
+    &.clicked {
+      background-color: $color-white;
+    color: $color-white;
+
+    }
+ 
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 2.5px;
+      width: 2rem;
+      background-color: currentColor;
+    }
+    &::after {
+      top: -6px;
+    }
+    &::before {
+      top: 6px;
+    }
+    @include respond(tab-port) {
+    }
+  }
+  &Logo {
+    height: 2rem;
+  }
+  &List {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: auto;
+    @include respond(tab-port) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 50%;
+      bottom: 0;
+      flex-direction: column;
+
+      align-items: stretch;
+      text-align: center;
+      background-color: $color-background;
+      padding: 10rem 5rem 5rem;
+      transform: translateX(100%);
+      transition: all 0.3s;
+      &.openNav {
+      
+          transform: translateX(0);
+        
+      }
+    }
+    @include respond(phone) {
+        left: 0;
+    }
+  }
+  &Link {
+    transition: all 0.2s;
+    &:visited,
+    &:link {
+      color: $color-primary;
+      font-family: "Red Hat Display", sans-serif;
+      padding: 1rem 2rem;
+      display: block;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+  &Btn {
+    transition: all 0.2s;
+
+    &:visited,
+    &:link {
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 1.2rem 2rem 1.2rem 4rem;
+      border-radius: 0.6rem;
+      background-image: url(./../../assets/icon/Vector-4.svg);
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
+      background-size: 0.8rem;
+      font-family: "Sato", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.9px;
+    }
+    &:hover,
+    &:active {
+      padding: 1.2rem 2rem 1.2rem 5rem;
+      background-position: 20% 50%;
+      transform: translateY(-2px);
+    }
+  }
+  &Cart {
+    padding: 0 2.5rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+}

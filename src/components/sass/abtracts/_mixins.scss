@@ -1,0 +1,13 @@
+@mixin respond($variable) {
+    @if ($variable == tab-port) {
+        @media only screen and (max-width:61.875em ) {
+            @content
+        }
+
+    };
+    @if ($variable == phone) {
+        @media only screen and (max-width:30em ) {
+            @content
+        }
+    }
+}

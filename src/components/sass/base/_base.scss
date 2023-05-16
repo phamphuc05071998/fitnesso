@@ -1,4 +1,10 @@
-@import "./../../../assets/icon/Sato-Medium.ttf";
+@import "./../abtracts/variables";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;900&display=swap');
+
+@font-face {
+    font-family: "Sato";
+    src: url(./../../../assets/fonts/Sato-Medium.ttf);
+}
 html {
   font-size: 62.5%;
 }
@@ -14,6 +20,8 @@ body {
   font-family: "Sato", sans-serif;
   font-size: 1.4rem;
   line-height: 1.6;
+  color: $color-primary;
+
 }
 p {
   font-family: "Red Hat Display", sans-serif;
