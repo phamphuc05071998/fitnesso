@@ -1,10 +1,14 @@
-import React from 'react'
-import HeroSection from '../components/Home/HeroSection/HeroSection'
+import React from "react";
+import HeroSection from "../components/Home/HeroSection/HeroSection";
+import StaticSection from "../components/Home/StaticSection/StaticSection";
 
 const Home = () => {
   return (
-    <HeroSection></HeroSection>
-  )
-}
+    <>
+      <HeroSection></HeroSection>
+      <StaticSection />
+    </>
+  );
+};
 
-export default Home
+export default Home;

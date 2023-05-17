@@ -25,7 +25,8 @@
     visibility: hidden;
     margin-left: auto;
     z-index: 2;
-    background-color: $color-white;
+    background-color: $color-background-2;
+   
     &.clicked {
       background-color: $color-primary;
     }
@@ -45,8 +46,9 @@
     color: $color-primary;
     cursor: pointer;
     &.clicked {
-      background-color: $color-white;
-    color: $color-white;
+      background-color: $color-background-2;
+
+    color: $color-background-2;
 
     }
  

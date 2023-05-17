@@ -4,7 +4,7 @@
 .hero {
    &Section {
     height: 100vh;
-    padding: 15rem 0;
+    padding: 15rem 0 8rem 0;
     background-color: $color-background-2;
     @include respond(medium) {
         height: auto;

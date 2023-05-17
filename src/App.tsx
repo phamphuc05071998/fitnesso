@@ -1,13 +1,14 @@
 import React from "react";
 import Navigation from "./components/Navigation/Navigation";
-import HeroSection from "./components/Home/HeroSection/HeroSection";
+
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
       <Navigation />
       <main>
-        <HeroSection />
+        <Home/>
       </main>
     </>
   );
