@@ -1,0 +1,71 @@
+@import "./../../sass/abtracts/variables";
+@import "./../../sass/abtracts/mixins";
+
+.hero {
+   &Section {
+    height: 100vh;
+    padding: 15rem 0;
+    background-color: $color-background-2;
+    @include respond(medium) {
+        height: auto;
+
+        }
+   }
+    &Container {
+        max-width: 145rem;
+        margin: 0 auto;
+        display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)) ;
+        grid-template-columns: repeat(2, 1fr) ;
+        
+        gap: 5rem;
+        // padding: 0 3%;
+        @include respond(medium) {
+        grid-template-columns:  1fr ;
+            padding: 0 3rem;
+
+        }
+
+    }
+    &Img{
+        width: 100%;
+        border-radius: 6px;
+    }
+    &Content {
+       display: flex;
+       flex-direction: column;
+       gap: 3rem;
+       justify-content: center;
+       align-items: flex-start;
+       max-width: 60rem;
+         @include respond(medium) {
+            justify-self: center;
+            
+        }
+    }
+    &SubTitle {
+        font-size: 6.4rem;
+        font-family: "Permanent Marker" ,sans-serif;
+        text-align: center;
+        margin-top: -1.5rem;
+        color: $color-heading;
+    }
+    &Label {
+        font-family: "Red Hat Display", sans-serif;
+        letter-spacing: 1.6px;
+    }
+    &Heading {
+        font-size: 7.2rem;
+        line-height: 1.2em;
+        font-weight: 500;
+        font-family: 'Sato', sans-serif;
+        @include respond(large) {
+            font-size: 5.5rem;
+        }
+    }
+    &Text {
+        font-size: 2.0rem;
+        font-weight: 300;
+        
+    }
+}

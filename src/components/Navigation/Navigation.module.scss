@@ -1,10 +1,14 @@
 @import "./../../components/sass/abtracts/variables";
 @import "./../../components/sass/abtracts/mixins";
 .header {
-  background-color: $color-white;
+  background-color: $color-background-2;
   height: 8rem;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .nav {
   margin: 0 auto;
@@ -13,7 +17,7 @@
   max-width: 145rem;
   width: 95%;
   align-items: center;
-  @include respond(tab-port) {
+  @include respond(large) {
   }
   &Opener {
     padding: 2rem 1.5rem;
@@ -25,7 +29,7 @@
     &.clicked {
       background-color: $color-primary;
     }
-    @include respond(tab-port) {
+    @include respond(large) {
       display: block;
       visibility: visible;
     }
@@ -61,7 +65,7 @@
     &::before {
       top: 6px;
     }
-    @include respond(tab-port) {
+    @include respond(large) {
     }
   }
   &Logo {
@@ -72,7 +76,7 @@
     list-style: none;
     align-items: center;
     margin-left: auto;
-    @include respond(tab-port) {
+    @include respond(large) {
       position: fixed;
       top: 0;
       right: 0;
