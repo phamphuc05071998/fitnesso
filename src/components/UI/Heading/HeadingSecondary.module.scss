@@ -1,0 +1,23 @@
+@import "./../../../components/sass/abtracts/variables";
+@import "./../../../components/sass/abtracts/mixins";
+
+.headingSecondary {
+    font-size: 6.4rem;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: $color-white;
+    font-family: "Sato", sans-serif;
+    max-width: 80rem;
+    margin-bottom: 3rem;
+    @include respond(large) {
+        font-size: 4.0rem;
+    }
+
+}
+.center {
+    text-align: center;
+    margin: 0 auto 3rem auto;
+}
+.primaryColor {
+    color: $color-primary;
+}
