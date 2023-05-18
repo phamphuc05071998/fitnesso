@@ -18,6 +18,12 @@
     letter-spacing: 2px;
     text-decoration: none;
   }
+  &:visited.whiteBtn, &:link.whiteBtn{
+    background-color: $color-white;
+    color: $color-primary;
+    background-image: url(./../../../assets/icon/_Vector-3.svg);
+
+  }
   &:hover,
   &:active {
    padding-left: 5rem;

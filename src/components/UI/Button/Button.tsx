@@ -3,11 +3,14 @@ import styles from "./Button.module.scss"
 import {Link} from "react-router-dom"
 interface props {
     children: string,
-    href?: any
+    href?: any,
+    white?: boolean
 }
-const Button:React.FC<props> = ({children, href}) => {
+const Button:React.FC<props> = ({children, href , white}) => {
+  const buttonClasses = `${styles.button} ${white ? styles.whiteBtn : "" }`
+  console.log(white)
   return (
-    <a className={styles.button} href='#'>{children}</a>    
+    <Link className={buttonClasses} to={`/${href}`}>{children}</Link>    
   )
 }
 

@@ -1,0 +1,69 @@
+@import "./../../sass/abtracts/variables";
+
+.card {
+  background-color: $color-white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-top: 10rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+    box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.1);
+  }
+  &Content {
+    display: grid;
+    row-gap: 1.5rem;
+    padding: 3rem;
+  }
+  &Img {
+    width: 100%;
+    height: 40rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &Duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &Time {
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+  &SubText {
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 1.6rem;
+    color: $color-sub-text;
+  }
+  &Heading {
+    font-size: 2.5rem;
+    font-family: "Sato", sans-serif;
+    font-weight: 500;
+    line-height: 1.1em;
+    text-transform: capitalize;
+  }
+  &Link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $color-primary;
+      padding-left: 1.4rem;
+      font-weight: 300;
+      display: inline-block;
+      background-image: url(./../../../assets/icon/_Vector-3.svg);
+      background-repeat: no-repeat;
+      background-position: 0 40%;
+      transition: all 0.4s;
+    }
+    &:hover,
+    &:active {
+      padding-left: 2rem;
+      background-position: 0.6rem 40%;
+    }
+  }
+}
