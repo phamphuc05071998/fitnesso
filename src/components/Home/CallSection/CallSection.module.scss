@@ -1,0 +1,71 @@
+@import "./../../sass/abtracts/variables";
+@import "./../../sass/abtracts/mixins";
+
+.call {
+  &Section {
+    background-color: $color-white;
+    position: relative;
+    z-index: 50;
+  }
+  &Container {
+    max-width: 145rem;
+    padding: 25rem 0rem 15rem 0rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 5rem;
+    column-gap: 10rem;
+  }
+  &Content {
+    display: grid;
+    row-gap: 3rem;
+    align-items: start;
+    justify-items: start;
+  }
+  &Heading {
+    max-width: 60rem;
+    font-size: 6.4rem;
+    line-height: 1.1em;
+    font-weight: 500;
+    font-family: "Sato", sans-serif;
+  }
+  &Text {
+    font-size: 2rem;
+    max-width: 50rem;
+    font-weight: 400;
+  }
+  &Card {
+
+    &Img {
+        img {
+            position: relative;
+            z-index: 50;
+            border-radius: 1rem;
+        
+
+        display: inline-block;
+        width: 100%;
+        
+      }
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(./../../../assets/icon/Lines.svg);
+        background-color: $color-primary;
+        background-repeat: no-repeat;
+        background-position: 25% ;
+        background-size: cover;
+        position: absolute;
+        top: 15rem;
+        width:47vw;
+        // left: 0;
+        right: 0;
+        height: 50vh;
+
+        z-index: 1;
+      }
+    }
+    
+  }
+}
