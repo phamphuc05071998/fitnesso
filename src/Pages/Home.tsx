@@ -3,6 +3,7 @@ import HeroSection from "../components/Home/HeroSection/HeroSection";
 import StaticSection from "../components/Home/StaticSection/StaticSection";
 import FeaturesSection from "../components/Home/FeaturesSection/FeaturesSection";
 import PlansSection from "../components/Home/PlansSection/PlansSection";
+import PhotoSection from "../components/Home/PhotoSection/PhotoSection";
 
 export interface plans {
   id: string,
@@ -72,6 +73,7 @@ const Home = () => {
       <FeaturesSection/>
       <PlansSection plansList={plansList1} title="Free home workouts and fitness plans" description="With free online classes people who don’t have the time or money to afford a personal coach can make change their lives forever." buttonTitle="View All"/>
       <PlansSection plansList={plansList2} title="Free home workouts and fitness plans"description="I’ve created these premium fitness classes for everyone starting from beginner to advanced level with an in depth FAQ." buttonTitle="View All" primaryColor/>
+      <PhotoSection/> 
 
     </>
   );

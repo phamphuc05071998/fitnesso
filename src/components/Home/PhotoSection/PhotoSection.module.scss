@@ -1,0 +1,33 @@
+@import "./../../sass/abtracts/variables";
+@import "./../../sass/abtracts/mixins";
+
+.photo {
+  &Section {
+    background-image: url(./../../../assets/img/squad-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+  }
+  &Text {
+    font-size: 6.4rem;
+    font-family: "Permanent Marker", sans-serif;
+    color: $color-white;
+    @include respond (large) {
+        font-size:4rem ;
+    } 
+    @include respond (medium) {
+        font-size:3rem ;
+    } 
+  }
+  &Img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
