@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './CtaSection.module.scss'
-import Button from '../../UI/Button/Button'
+
 const CtaSection = () => {
   return (
     <section className={styles.ctaSection }>

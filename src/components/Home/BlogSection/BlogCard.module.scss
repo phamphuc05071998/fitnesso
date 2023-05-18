@@ -1,0 +1,95 @@
+@import "./../../sass/abtracts/mixins";
+@import "./../../sass/abtracts/variables";
+
+
+.card {
+    margin-top: 10rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 60rem;
+    padding: 15rem 3rem 3rem 3rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.3s;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
+    }
+    @include respond (large) {
+        min-height: 3.5rem;
+    }
+    
+    &Img {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.8rem;
+        object-fit: cover;
+        // width: 60rem;
+
+
+    }
+    &Content {
+        position: relative;
+        padding: 2rem;
+        background-color: $color-white;
+        border-radius: 1rem;
+        display: grid;
+        row-gap: 1.5rem;
+        z-index: 5;
+        width: 100%;
+        
+        
+    }
+    &Profile {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        
+        img{
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            
+        }
+        p {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+           
+        }
+      
+    }
+    &Description {
+       
+       font-size: 2rem;
+       font-family: "Sato", sans-serif;
+       line-height: 1.1em;
+       font-weight: 500;
+    }
+    &Link {
+        &:link,
+        &:visited {
+          font-size: 1.4rem;
+          text-decoration: none;
+          color: $color-primary;
+          padding-left: 1.4rem;
+          font-weight: 300;
+          display: inline-block;
+          background-image: url(./../../../assets/icon/_Vector-3.svg);
+          background-repeat: no-repeat;
+          background-position: 0 40%;
+          transition: all 0.4s;
+        }
+        &:hover,
+        &:active {
+          padding-left: 2rem;
+          background-position: 0.6rem 40%;
+        }
+    }
+}
