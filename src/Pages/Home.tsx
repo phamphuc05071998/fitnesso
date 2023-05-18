@@ -5,6 +5,7 @@ import FeaturesSection from "../components/Home/FeaturesSection/FeaturesSection"
 import PlansSection from "../components/Home/PlansSection/PlansSection";
 import PhotoSection from "../components/Home/PhotoSection/PhotoSection";
 import CallSection from "../components/Home/CallSection/CallSection";
+import CtaSection from "../components/Home/CtaSection/CtaSection";
 
 export interface plans {
   id: string,
@@ -76,6 +77,7 @@ const Home = () => {
       <PlansSection plansList={plansList2} title="Free home workouts and fitness plans"description="I’ve created these premium fitness classes for everyone starting from beginner to advanced level with an in depth FAQ." buttonTitle="View All" primaryColor/>
       <PhotoSection/> 
       <CallSection/>
+      <CtaSection/>
     </>
   );
 };

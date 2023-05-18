@@ -16,6 +16,9 @@
     justify-items: center;
     row-gap: 5rem;
     column-gap: 10rem;
+    @include respond(medium) {
+      grid-template-columns: 1fr;
+    }
   }
   &Content {
     display: grid;
