@@ -1,0 +1,80 @@
+@import "./../sass/abtracts/variables";
+@import "./../sass/abtracts/mixins";
+.footer {
+  padding: 10rem 2rem;
+  background-color: $color-primary;
+  &Container {
+    display: grid;
+    max-width: 145rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    color: $color-white;
+    row-gap: 10rem;
+    column-gap: 5rem;
+    @include respond(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 5rem;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &Label {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Red Hat Display";
+    letter-spacing: 1px;
+  }
+  &Logo {
+    @include respond(medium) {
+      grid-column: 1/-1;
+    }
+    height: 3rem;
+    img {
+      height: 100%;
+    }
+  }
+
+  &ContactLink {
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin-bottom: 3rem;
+      text-decoration: none;
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+  &Link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.6em;
+    }
+  }
+  &Payment {
+    margin-top: 5rem;
+    grid-column: 1/-1;
+    display: flex;
+    gap: 5rem;
+    &Logo {
+      background-color: $color-white;
+      width: 4.5rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+    }
+    &Svg {
+      height: 1.8rem;
+    }
+  }
+}
