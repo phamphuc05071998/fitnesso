@@ -7,6 +7,7 @@ import PhotoSection from "../components/Home/PhotoSection/PhotoSection";
 import CallSection from "../components/Home/CallSection/CallSection";
 import CtaSection from "../components/Home/CtaSection/CtaSection";
 import BlogSection from "../components/Home/BlogSection/BlogSection";
+import GallerySection from "../components/Home/GallerySection/GallerySection";
 
 export interface plans {
   id: string,
@@ -80,6 +81,7 @@ const Home = () => {
       <CallSection/>
       <CtaSection/>
       <BlogSection/>
+      <GallerySection/>
     </>
   );
 };

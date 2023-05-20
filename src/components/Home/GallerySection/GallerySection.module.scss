@@ -1,0 +1,64 @@
+@import "./../../sass/abtracts/variables";
+
+.gallery {
+  &Section {
+    background-color: $color-background-2;
+    overflow: hidden;
+  }
+  &Container {
+    padding: 15rem 0;
+    position: relative;
+  }
+  &ImgContain {
+    display: flex;
+    gap: 10rem;
+    justify-content: flex-start;
+  }
+  &Img {
+    height: 40rem;
+    width: 40rem;
+    justify-self: stretch;
+
+    img {
+      display: block;
+      height: 100%;
+      // width: 100%;
+      width: 40rem;
+      object-fit: cover;
+      border-radius: 1.6rem;
+    }
+  }
+  &Content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 20rem;
+    width: 150vw;
+    background-color: $color-sub-text;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    display: flex;
+    transform: rotate(2deg) translateX(-18%);
+    -webkit-box-pack: center;
+    justify-content: center;
+    
+  }
+  &Link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 3rem;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 0 4rem;
+     
+    }
+  }
+  &Logo {
+    width: 5rem;
+    height: 5rem;
+  }
+}

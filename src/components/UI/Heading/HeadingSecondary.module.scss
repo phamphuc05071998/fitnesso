@@ -8,7 +8,7 @@
     color: $color-white;
     font-family: "Sato", sans-serif;
     max-width: 80rem;
-    margin-bottom: 3rem;
+   
     @include respond(large) {
         font-size: 4.0rem;
     }
