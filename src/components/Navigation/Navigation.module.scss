@@ -1,7 +1,7 @@
 @import "./../../components/sass/abtracts/variables";
 @import "./../../components/sass/abtracts/mixins";
 .header {
-  background-color: $color-background-2;
+  background-color: $color-white;
   height: 8rem;
   display: flex;
   align-items: center;
@@ -112,6 +112,7 @@
       padding: 1rem 2rem;
       display: block;
       text-decoration: none;
+      font-size: 1.6rem;
     }
     &:hover,
     &:active {

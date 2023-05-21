@@ -62,8 +62,12 @@
   &Payment {
     margin-top: 5rem;
     grid-column: 1/-1;
-    display: flex;
-    gap: 5rem;
+    display: grid;
+    width: 40%;
+    
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    row-gap: 3rem;
+    column-gap: 3rem;
     &Logo {
       background-color: $color-white;
       width: 4.5rem;

@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import About from "./Pages/About";
+import FreeWorkout from "./Pages/FreeWorkout";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       }, {
         path:'/about',
         element: <About/>
+      },
+      {
+        path:'/free-workouts',
+        element:<FreeWorkout/>
       }
     ]
   },

@@ -1,0 +1,17 @@
+@import "./../../sass/abtracts/variables";
+
+.pricing{
+   &Section {
+    background-color: $color-background-2;
+   } 
+  &Container {
+    padding: 15rem 0;
+    max-width: 145rem;
+    margin: 0 auto;
+    display: grid;
+    column-gap: 5rem;
+    row-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+}
+

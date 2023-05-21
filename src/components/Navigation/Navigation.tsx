@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link className={styles.navLink} to="/free">
+            <Link className={styles.navLink} to="/free-workouts">
               Free Workout
             </Link>
           </li>
