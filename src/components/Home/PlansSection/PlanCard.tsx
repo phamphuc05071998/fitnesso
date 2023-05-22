@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./PlanCard.module.scss";
 
+import { Link } from "react-router-dom";
 interface props {
+  id: string,
   img: string;
   title: string;
   duration: string;
@@ -9,6 +11,7 @@ interface props {
   buttonText: string;
 }
 const PlanCard: React.FC<props> = ({
+  id,
   img,
   title,
   duration,
@@ -16,7 +19,8 @@ const PlanCard: React.FC<props> = ({
   buttonText,
 }) => {
   return (
-    <div className={styles.card}>
+
+    <Link to={id} className={styles.card}>
       <div className={styles.cardImg}>
         <img src={img} alt="trainer"></img>
       </div>
@@ -32,7 +36,7 @@ const PlanCard: React.FC<props> = ({
           {buttonText}
         </a>
       </div>
-    </div>
+    </Link>
   );
 };
 

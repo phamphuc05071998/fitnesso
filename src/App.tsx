@@ -6,7 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import About from "./Pages/About";
 import FreeWorkout from "./Pages/FreeWorkout";
-
+import Shop from "./Pages/Shop";
+import Detail from "./Pages/Detail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +23,21 @@ const router = createBrowserRouter([
       {
         path:'/free-workouts',
         element:<FreeWorkout/>
-      }
+      },{
+        path: '/shop'
+        ,children: [
+          { 
+            path:"",
+            element:<Shop/>
+          },
+          {
+            path: ':id',
+            element: <Detail/>
+          }
+        ]
+       
+      }, 
+
     ]
   },
 ]);

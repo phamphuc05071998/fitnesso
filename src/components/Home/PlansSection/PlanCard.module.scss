@@ -1,12 +1,19 @@
 @import "./../../sass/abtracts/variables";
+@import "./../../sass/abtracts/mixins";
+
 
 .card {
-  background-color: $color-white;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  margin-top: 10rem;
-  transition: all 0.3s;
-  &:hover {
+  &:link, &:visited {
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-top: 10rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: $color-primary;
+
+  }
+  &:hover, &:active {
     transform: translateY(-3px);
     opacity: 0.8;
     box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.1);
@@ -19,6 +26,9 @@
   &Img {
     width: 100%;
     height: 40rem;
+    @include respond(large) {
+      height: 25rem;
+    }
     img {
       width: 100%;
       height: 100%;

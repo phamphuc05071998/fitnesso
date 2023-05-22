@@ -31,7 +31,7 @@ const PricingSection = () => {
   return (
     <section className={styles.pricingSection}>
         <div className={styles.pricingContainer}>
-            {plansList1.map(plan => <PlanCard key={plan.id} duration={plan.duration} title={plan.title} price={plan.price} buttonText={plan.buttonText} img={plan.img}/>)}
+            {plansList1.map(plan => <PlanCard key={plan.id} id={plan.id} duration={plan.duration} title={plan.title} price={plan.price} buttonText={plan.buttonText} img={plan.img}/>)}
         </div>
     </section>
   )

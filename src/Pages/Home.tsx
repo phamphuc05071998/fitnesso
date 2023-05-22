@@ -15,7 +15,8 @@ export interface plans {
   price: string,
   buttonText: string,
   title: string,
-  img: string
+  img: string,
+  type?: string []
 }
 
  const  plansList1: plans [] = [
