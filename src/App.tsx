@@ -1,13 +1,13 @@
 import React from "react";
 
-
 import Home from "./Pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import About from "./Pages/About";
 import FreeWorkout from "./Pages/FreeWorkout";
 import Shop from "./Pages/Shop";
-import Detail from "./Pages/Detail";
+import DetailFree from "./Pages/DetaiFree";
+import Product from "./Pages/Product";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,36 +15,43 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
-      }, {
-        path:'/about',
-        element: <About/>
+        element: <Home />,
       },
       {
-        path:'/free-workouts',
-        element:<FreeWorkout/>
-      },{
-        path: '/shop'
-        ,children: [
-          { 
-            path:"",
-            element:<Shop/>
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/free-workouts",
+        children: [
+          {
+            path: "",
+            element: <FreeWorkout />,
+          },
+          {
+            path: ":id",
+            element: <DetailFree />,
+          },
+        ],
+      },
+      {
+        path: "/shop",
+        children: [
+          {
+            path:'',
+            element: <Shop/>
           },
           {
             path: ':id',
-            element: <Detail/>
+            element: <Product/>
           }
         ]
-       
-      }, 
-
-    ]
+      },
+    ],
   },
 ]);
 function App() {
-  return (
-    <RouterProvider router={router}/>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
