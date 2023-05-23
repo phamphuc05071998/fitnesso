@@ -34,9 +34,9 @@ const VideoSection = () => {
         <Modal onCloseModal={() => setIsoOpenModal(false)}>
           
             <iframe
-            //   height="730px"
-            //   width="1120px"
-                className={styles.videoIframe}
+              height="730px"
+              width="1120px"
+                className={styles.detailVideoIframe}
               src="https://www.youtube.com/embed/iCQ2gC4DqJw?controls=0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

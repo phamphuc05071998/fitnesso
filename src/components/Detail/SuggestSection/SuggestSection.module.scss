@@ -1,0 +1,30 @@
+@import "./../../sass/abtracts/mixins";
+@import "./../../sass/abtracts/variables";
+
+.suggest {
+  &Section {
+    background-color: $color-background-2;
+    padding: 15rem 2rem;
+    @include respond(large) {
+      padding: 10rem 2rem;
+    }
+  }
+  &Container {
+    max-width: 145rem;
+    margin: 0 auto;
+  }
+  &Content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
+    column-gap: 5rem;
+     
+    @include respond(large) {
+      row-gap: 2.5rem;
+      column-gap: 2.5rem;
+    }
+    @include respond(medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "./../../../components/sass/abtracts/variables";
+@import "./../../../components/sass/abtracts/mixins";
+
+.hero {
+    &Section {
+        background-color: rgba($color-heading, 0.4);
+        height: 100vh;
+        background-image: url(./../../../assets/icon/Green-Lines.svg);
+        background-repeat: no-repeat;
+        background-position: 100%  100%;
+        background-size: 100rem;
+        @include respond(medium) {
+          height: auto;
+
+        }
+    }
+    &Container {
+        max-width: 145rem;
+        padding: 10rem 2rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5rem;
+        column-gap: 5rem;
+        @include respond(medium) {
+            grid-template-columns: 1fr;
+
+        }
+    }
+    &Label {
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    &Heading {
+        font-size: 7.2rem;
+        color: $color-primary;
+        max-width: 60rem;
+        line-height: 1.1em;
+        font-weight: 500;
+        @include respond(large) {
+            font-size: 5.5rem;
+        }
+        @include respond(medium) {
+            font-size: 4rem;
+        }
+    }
+    &Img {
+        height: 70rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        @include respond(medium) {
+            height: 40rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &Header {
+        align-self: center;
+        display: grid;
+        row-gap: 3rem;
+        justify-items: start;
+        align-items: start;
+    }
+    &Text {
+        font-size: 2rem;
+        font-family: "Red Hat Display", sans-serif;
+        line-height: 1.5em;
+    }
+
+}
+.trainer {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    &Img {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+    }
+    &Name {
+        text-transform: uppercase;
+    }
+}
