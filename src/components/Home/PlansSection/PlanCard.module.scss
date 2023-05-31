@@ -7,7 +7,7 @@
     background-color: $color-white;
     border-radius: 1.5rem;
     overflow: hidden;
-    margin-top: 10rem;
+   
     transition: all 0.3s;
     text-decoration: none;
     color: $color-primary;
@@ -56,22 +56,23 @@
     line-height: 1.1em;
     text-transform: capitalize;
   }
-  &Link {
-    &:link,
-    &:visited {
+  &Btn {
+    
       font-size: 1.4rem;
       text-decoration: none;
       color: $color-primary;
       padding-left: 1.4rem;
+      text-align: left;
       font-weight: 300;
       display: inline-block;
       background-image: url(./../../../assets/icon/_Vector-3.svg);
       background-repeat: no-repeat;
       background-position: 0 40%;
       transition: all 0.4s;
-    }
-    &:hover,
-    &:active {
+      border: none;
+      background-color: transparent;
+    &:hover
+  {
       padding-left: 2rem;
       background-position: 0.6rem 40%;
     }

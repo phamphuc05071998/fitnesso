@@ -2,71 +2,83 @@
 @import "./../../sass/abtracts/mixins";
 
 .hero {
-   &Section {
-    height: 100vh;
-    padding: 15rem 0 8rem 0;
+  &Section {
+    min-height: 100vh;
+    padding: 15rem 1rem 8rem 1rem;
     background-color: $color-background-3;
+    @include respond(large) {
+      padding: 10rem 1rem 8rem 1rem;
+    }
+
+    @include respond(phone) {
+      padding: 10rem 1rem 7.5rem 1rem;
+    }
+  }
+  &Container {
+    max-width: 145rem;
+    margin: 0 auto;
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)) ;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5rem;
+    // padding: 0 3%;
     @include respond(medium) {
-        height: auto;
+      grid-template-columns: 1fr;
+      padding: 0 3rem;
+    }
+  }
+  &ImgContainer {
+    height: 70rem;
+  }
+  &Img {
+    border-radius: 6px;
 
-        }
-   }
-    &Container {
-        max-width: 145rem;
-        margin: 0 auto;
-        display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)) ;
-        grid-template-columns: repeat(2, 1fr) ;
-        
-        gap: 5rem;
-        // padding: 0 3%;
-        @include respond(medium) {
-        grid-template-columns:  1fr ;
-            padding: 0 3rem;
-
-        }
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 60rem;
+    @include respond(medium) {
+      justify-self: center;
     }
-    &Img{
-        width: 100%;
-        border-radius: 6px;
+  }
+  &SubTitle {
+    font-size: 6.4rem;
+    font-family: "Permanent Marker", sans-serif;
+    text-align: center;
+    margin-top: -1.5rem;
+    color: $color-heading;
+  }
+  &Label {
+    font-family: "Red Hat Display", sans-serif;
+    letter-spacing: 1.6px;
+  }
+  &Heading {
+    font-size: 7.2rem;
+    line-height: 1.2em;
+    font-weight: 500;
+    font-family: "Sato", sans-serif;
+    @include respond(large) {
+      font-size: 5.5rem;
     }
-    &Content {
-       display: flex;
-       flex-direction: column;
-       gap: 3rem;
-       justify-content: center;
-       align-items: flex-start;
-       max-width: 60rem;
-         @include respond(medium) {
-            justify-self: center;
-            
-        }
+    @include respond(medium) {
+      font-size: 4rem;
     }
-    &SubTitle {
-        font-size: 6.4rem;
-        font-family: "Permanent Marker" ,sans-serif;
-        text-align: center;
-        margin-top: -1.5rem;
-        color: $color-heading;
+    @include respond(phone) {
+      font-size: 3.5rem;
     }
-    &Label {
-        font-family: "Red Hat Display", sans-serif;
-        letter-spacing: 1.6px;
-    }
-    &Heading {
-        font-size: 7.2rem;
-        line-height: 1.2em;
-        font-weight: 500;
-        font-family: 'Sato', sans-serif;
-        @include respond(large) {
-            font-size: 5.5rem;
-        }
-    }
-    &Text {
-        font-size: 2.0rem;
-        font-weight: 400;
-        max-width: 50rem;
-        line-height: 1.6em;
-    }
+  }
+  &Text {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 50rem;
+    line-height: 1.6em;
+  }
 }

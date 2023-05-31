@@ -3,6 +3,8 @@ import styles from "./AboutSection.module.scss";
 import HeadingSecondary from "../../UI/Heading/HeadingSecondary";
 import Button from "../../UI/Button/Button";
 import img from "./../../../assets/img/gallery-5.jpeg";
+import aboutImg from "./../../../assets/img/about-img.jpeg";
+
 const AboutSection = () => {
   return (
     <section className={styles.aboutSection}>
@@ -35,7 +37,7 @@ const AboutSection = () => {
         <div className={styles.aboutImgContent}>
           <div className={styles.aboutImgContentBg1}>&nbsp;</div>
           <div className={styles.aboutImg}>
-            <img src={img} alt=""></img>
+            <img src={aboutImg} alt=""></img>
           </div>
         </div>
         <div className={styles.aboutContent}>

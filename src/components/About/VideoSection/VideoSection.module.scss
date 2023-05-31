@@ -1,19 +1,26 @@
 @import "./../../sass/abtracts/variables";
 @import "./../../sass/abtracts/mixins";
 
-
 .video {
   &Section {
     background-color: $color-white;
-
   }
   &Container {
     max-width: 145rem;
-    padding: 15rem 2rem;
+    padding: 15rem 1rem;
     margin: 0 auto;
     display: grid;
     justify-items: center;
     row-gap: 10rem;
+    @include respond(large) {
+      padding: 10rem 1rem;
+    }
+    @include respond(medium) {
+      padding: 10rem 1rem;
+    }
+    @include respond(phone) {
+      padding: 7.5rem 1rem;
+    }
   }
   &Heading {
     display: grid;
@@ -30,8 +37,8 @@
     cursor: pointer;
     transition: all 0.3s;
     position: relative;
-    @include respond (large) {
-        height: 45rem;
+    @include respond(large) {
+      height: 45rem;
     }
     &:hover {
       opacity: 0.8;
@@ -63,14 +70,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-//   &Wrapper {
-//     position: relative;
-//     overflow: hidden;
-//     padding-top: 56.25%;
-//     z-index: 1000;
-//     width: 112rem;
-//     height: 73rem;
-//   }
+  //   &Wrapper {
+  //     position: relative;
+  //     overflow: hidden;
+  //     padding-top: 56.25%;
+  //     z-index: 1000;
+  //     width: 112rem;
+  //     height: 73rem;
+  //   }
   &Iframe {
     position: relative;
     top: 0;

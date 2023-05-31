@@ -1,20 +1,56 @@
 import React from "react";
 import styles from "./HeroSection.module.scss";
-import img from "./../../../assets/img/gallery-5.jpeg";
+import { addItemsToCart } from "../../../utils/cart";
+import { useDispatch } from "react-redux";
+import { addItems } from "../../../store/cartProvider";
+import { toast } from "react-toastify";
+interface props {
+  title: string,
+  img: string,
+  duration: string,
+  description: string,
+  instructor: string,
+  id: string,
+  price: number
+}
 
+const HeroSection:React.FC<props> = ({title, img, duration, description, instructor, id, price }) => {
+  const dispatch = useDispatch()
+  const errToast = (message:string) => {
+   toast.error(message)
+  }
+  const addToCart =  async (e:React.FormEvent) => {
+    e.preventDefault()
+    const token = localStorage.getItem("token");
+    if (!token) return errToast('Please login to continue')
+    try {
+      const response = await addItemsToCart(token, id);
+      console.log(response)
+      dispatch(
+        addItems({ 
+          id: id,
+          title: title,
+          price: price,
+          img: img
+        })
+      );
+     
+    } catch (err) {
 
-const HeroSection = () => {
+      errToast("Some thing went wrong");
+    }
+  }
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
         <header className={styles.heroHeader}>
-          <p className={styles.heroLabel}>30 days</p>
-          <h2 className={styles.heroHeading}>Shedded Meal Plan</h2>
+          <p className={styles.heroLabel}>{duration} </p>
+          <h2 className={styles.heroHeading}>{title}</h2>
           <p className={styles.heroText}>
-          Ideal for beginner fitness people with busy schedules. In this 3 day split you will learn to make the most out of your time in the gym with an efficient total-body workouts. All workouts are designed to be flexible for working out at home.
+         {description}
           </p>
-          <form className={styles.heroForm}>
-            <input className={styles.heroInput} type="number" defaultValue="1" step="1" min="1" />
+          <form className={styles.heroForm} onSubmit={addToCart}>
+            <input className={styles.heroInput} type="number" defaultValue="1" step="1" min="1" max="1" />
             <button type="submit" className={styles.heroBtn}>Add to card</button>
           </form>
         </header>

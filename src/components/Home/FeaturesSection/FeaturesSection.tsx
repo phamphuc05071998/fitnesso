@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./FeaturesSection.module.scss";
 import HeadingSecondary from "../../UI/Heading/HeadingSecondary";
 import Button from "../../UI/Button/Button";
-import img1 from "././../../../assets/img/Rectangle-439.png";
-import { title } from "process";
 import FeatureCard from "./FeatureCard";
 
 const FeatureCardList = [

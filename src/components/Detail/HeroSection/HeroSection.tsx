@@ -1,10 +1,17 @@
 import React from "react";
 import styles from "./HeroSection.module.scss";
-import img from "./../../../assets/img/gallery-5.jpeg";
+
 
 import trainerImg from "./../../../assets/img/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
 import Button from "../../UI/Button/Button";
-const HeroSection = () => {
+interface props {
+  title: string,
+  img: string,
+  duration: string,
+  description: string,
+  instructor: string
+}
+const HeroSection:React.FC<props> = ({title, img, duration, description, instructor}) => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
@@ -13,16 +20,16 @@ const HeroSection = () => {
         </div>
         <header className={styles.heroHeader}>
             <p className={styles.heroLabel}>
-                30 minutes
+                {duration}
             </p>
-            <h2 className={styles.heroHeading}>The Perfect Outdoor Workout</h2>
+            <h2 className={styles.heroHeading}>{title}</h2>
             <p className={styles.heroText}>
-            Muscles fit dip major tuck flex extension. Walkout heart rate barbell, leg press running bounce stretch kick weighted pectorals crosstraining.
+           {description}
             </p>
             <div className={styles.trainer}>
                 
                 <img src={trainerImg} className={styles.trainerImg} alt=""></img>
-                <p className={styles.trainerName}> alexander hipp</p>
+                <p className={styles.trainerName}>{instructor}</p>
             </div>
             <Button>Start workout</Button>
         </header>

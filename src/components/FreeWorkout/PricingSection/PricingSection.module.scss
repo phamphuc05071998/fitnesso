@@ -1,17 +1,21 @@
 @import "./../../sass/abtracts/variables";
+@import "./../../sass/abtracts/mixins";
 
 .pricing{
    &Section {
     background-color: $color-background-2;
+    padding: 10rem 1rem;
+    @include respond(phone) {
+      padding: 7.5rem 1rem;
+    }
    } 
   &Container {
-    padding: 15rem 0;
     max-width: 145rem;
     margin: 0 auto;
     display: grid;
     column-gap: 5rem;
     row-gap: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 

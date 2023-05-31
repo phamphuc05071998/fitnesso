@@ -1,61 +1,69 @@
 @import "./../../sass/abtracts/variables";
 @import "./../../sass/abtracts/mixins";
 
-
 .shop {
-    &Section {
-        background-color: $color-background-4;
-
+  &Section {
+    background-color: $color-background-4;
+  }
+  &Container {
+    padding: 10rem 1rem;
+    max-width: 145rem;
+    margin: 0 auto;
+    @include respond(medium) {
+      padding: 7.5rem 1rem;
     }
-    &Container {
-        padding: 10rem 2rem;
-        max-width: 145rem;
-        margin: 0 auto;
-    }   
-    &Categories {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #dfdfdf;
-        &Btn {
-            border: none;
-            background-color: transparent;
-            padding: 1.2rem 2rem;
-            text-transform: uppercase;
-            font-size: 1.4rem;
-            font-family: "Sato", sans-serif;
-            color:$color-primary;
-            letter-spacing: 1.2px;
-            font-weight: 300;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-left: 1.5rem;
-            border-radius: 0.3rem;
-            &:hover {
-                transform: translateY(-3px);
-                opacity: 0.8;
-            }
-            &.active {
-                background-color: $color-heading;
-                color: $color-white;
-            }
-        }
+  }
+  &Categories {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #dfdfdf;
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 2rem;
     }
-    &Heading {
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        font-weight: 400;
-        margin-right: auto;
+    &Btn {
+      border: none;
+      background-color: transparent;
+      padding: 1.2rem 2rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-family: "Sato", sans-serif;
+      color: $color-primary;
+      letter-spacing: 1.2px;
+      font-weight: 300;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-left: 1.5rem;
+      border-radius: 0.3rem;
+      &:hover {
+        transform: translateY(-3px);
+        opacity: 0.8;
+      }
+      &.active {
+        background-color: $color-heading;
+        color: $color-white;
+      }
     }
-    &Content {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 5rem;
-        row-gap: 5rem;
-        @include respond(medium) {
-        grid-template-columns: 1fr;
-
-        }
+  }
+  &Heading {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-right: auto;
+    @include respond(phone) {
+        text-align: center;
+      }
+  }
+  &Content {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    row-gap: 5rem;
+    @include respond(medium) {
+      grid-template-columns: 1fr;
     }
+  }
 }

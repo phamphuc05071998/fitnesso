@@ -4,18 +4,20 @@
 .hero {
   &Section {
     background-color: rgba($color-heading, 0.4);
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(./../../../assets/icon/Green-Lines.svg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100rem;
+    padding: 15rem 1rem;
     @include respond(medium) {
-      height: auto;
+      padding: 10rem 1rem;
+
     }
   }
   &Container {
     max-width: 145rem;
-    padding: 10rem 2rem;
+   
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,6 +43,8 @@
     }
     @include respond(medium) {
       font-size: 4rem;
+    } @include respond(phone) {
+      font-size: 3.5rem;
     }
   }
   &Img {

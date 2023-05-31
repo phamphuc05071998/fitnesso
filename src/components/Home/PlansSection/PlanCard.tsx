@@ -7,8 +7,9 @@ interface props {
   img: string;
   title: string;
   duration: string;
-  price: string;
+  price: number;
   buttonText: string;
+  onClick?: any
 }
 const PlanCard: React.FC<props> = ({
   id,
@@ -17,24 +18,26 @@ const PlanCard: React.FC<props> = ({
   duration,
   price,
   buttonText,
+  onClick
 }) => {
+  const to = `${price === 0 ? `/free-workouts/${id}` : `/shop/${id}`}`
   return (
 
-    <Link to={id} className={styles.card}>
+    <Link to={to} className={styles.card}>
       <div className={styles.cardImg}>
         <img src={img} alt="trainer"></img>
       </div>
       <div className={styles.cardContent}>
         <div className={styles.cardDuration}>
           <span className={styles.cardTime}>{duration}</span>
-          <span className={styles.cardSubText}>{price}</span>
+          <span className={styles.cardSubText}>{`${price ===0 ? "Free" :  `$ ${price} usd` }`}</span>
         </div>
         <h3 className={styles.cardHeading}>
           {title}
         </h3>
-        <a className={styles.cardLink} href="/plan">
+        <button onClick={onClick} className={styles.cardBtn}>
           {buttonText}
-        </a>
+        </button>
       </div>
     </Link>
   );

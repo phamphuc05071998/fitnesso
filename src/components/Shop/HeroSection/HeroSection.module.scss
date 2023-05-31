@@ -3,10 +3,14 @@
 
 .hero {
   &Section {
-    padding: 23rem 0 15rem 0;
-    background-color: $color-background-4;
-
-   
+    padding: 15rem 1rem 0 1rem;
+    background-color: $color-background-2;
+    @include respond(large) {
+      padding: 10rem 1rem 0 1rem;
+    }
+    @include respond(phone) {
+      padding: 7.5rem 1rem 0 1rem;
+    }
   }
   &Container {
     max-width: 145rem;
@@ -29,31 +33,35 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 20rem;
-    font-size: 6.4rem;
-    transform: rotate(2deg) scale(1.05);
+    left: 0;
+    right: 0;
     margin-top: auto;
     margin-bottom: auto;
-    color: $color-white;
-    background-color: $color-primary;
+    font-size: 6.4rem;
+    transform:  rotate(2deg);
+    color: $color-primary;
+    background-color: $color-background;
     width: 100%;
+   
+    height: 20rem;
+    @include respond(medium) {
+      height: 12.5rem;
+
+    }
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    
+    justify-content: center;
     font-family: "Sato", sans-serif;
     line-height: 1.1em;
 
     @include respond(large) {
       font-size: 5.5rem;
-      height: 15rem;
     }
     @include respond(medium) {
       font-size: 4rem;
     }
     @include respond(phone) {
-      font-size: 3.51rem;
+      font-size: 3.5rem;
     }
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import sandraImg from "./../../../assets/img/Rectangle-439.png"
+import sandraImg from "./../../../assets/img/pre-workout.jpeg"
 import Button from '../../UI/Button/Button'
 import styles from "./HeroSection.module.scss"
 const HeroSection = () => {

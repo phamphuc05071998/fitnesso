@@ -23,6 +23,9 @@ const PlansSection: React.FC<props> = ({
   const headingClasses = `${styles.plansHeading} ${
     primaryColor ? styles.PrimaryColor : ""
   }`;
+  const textClasses = `${styles.plansText} ${
+    primaryColor ? styles.PrimaryColor : ""
+  }`;
   const sectionClasses = `${styles.plansSection} ${
     primaryColor ? styles.PrimaryColor : ""
   }`;
@@ -30,21 +33,24 @@ const PlansSection: React.FC<props> = ({
     <section className={sectionClasses}>
       <div className={styles.plansContainer}>
         <h2 className={headingClasses}>{title}</h2>
-        <p className={styles.plansText}>{description}</p>
+        <p className={textClasses}>{description}</p>
         <div className={styles.plansBtn}>
           <Button white={primaryColor ? true : false}>{buttonTitle}</Button>
         </div>
+        <div className={styles.plansList}>
         {plansList.map((item) => (
           <PlanCard
             key={item.id}
             id={item.id}
             img={item.img}
-            buttonText={item.buttonText}
+            buttonText="View all"
             price={item.price}
             title={item.title}
             duration={item.duration}
           />
         ))}
+
+        </div>
       </div>
     </section>
   );

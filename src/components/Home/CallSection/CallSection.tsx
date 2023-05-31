@@ -17,10 +17,8 @@ const CallSection = () => {
           </p>
           <Button>Book a call</Button>
         </div>
-        <div className={styles.callCard}>
-          <div className={styles.callCardImg}>
-            <img  src={img} alt="trainer"></img>
-          </div>
+        <div className={styles.callImg}>
+            <img src={img} alt="trainer"></img>
         </div>
       </div>
     </section>

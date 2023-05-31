@@ -4,11 +4,19 @@
 .blog {
     &Section {
         background-color:$color-white;
+        padding: 15rem 1rem;
+        @include respond( large) {
+        padding: 10rem 1rem;
+           
+        }
+     
+        @include respond( phone) {
+        padding: 7.5rem 1rem;  
+        }
     }
     &Container{
         max-width: 145rem;
         margin: 0 auto;
-        padding: 15rem 2rem;
     }
     &Heading {
         display: grid;
@@ -25,8 +33,14 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 6rem;
+       
+        margin-top: 10rem;
         @include respond( medium) {
             grid-template-columns: 1fr;
+        margin-top: 5rem;
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+
         }
     }
     &Card {
@@ -66,6 +80,7 @@
             row-gap: 1.5rem;
             z-index: 5;
             width: 100%;
+            margin-top: 10rem;
             
             
         }

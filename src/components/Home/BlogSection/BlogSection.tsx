@@ -59,7 +59,7 @@ const BlogSection = () => {
                 <Button >View all post</Button>
             </div>
             <div className={styles.blogContent}>
-          
+                
                 {blogs.map(blog => <BlogCard key={blog.id} title={blog.title} profile={blog.profile} img={blog.img} />)}
             </div>
         </div>

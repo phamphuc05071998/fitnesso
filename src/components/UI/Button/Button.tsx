@@ -8,7 +8,6 @@ interface props {
 }
 const Button:React.FC<props> = ({children, href , white}) => {
   const buttonClasses = `${styles.button} ${white ? styles.whiteBtn : "" }`
-  console.log(white)
   return (
     <Link className={buttonClasses} to={`/${href}`}>{children}</Link>    
   )

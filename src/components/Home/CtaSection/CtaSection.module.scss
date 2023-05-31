@@ -6,7 +6,14 @@
     background-image: url(./../../../assets/img/drink-img-large.jpeg);
     background-position: center;
     background-size: cover;
-    padding: 16rem 2rem;
+    padding: 20rem 1rem 10rem 1rem;
+
+    @include respond(medium) {
+      padding: 10rem 1rem 10rem 1rem;
+    }
+    @include respond(phone) {
+      padding: 10rem 1rem 7.5rem 1rem;
+    }
   }
   &Container {
     max-width: 145rem;
@@ -20,9 +27,11 @@
     @include respond(large) {
       padding: 5rem;
     }
+    @include respond(phone) {
+      padding: 3rem;
+    }
   }
   &Heading {
-    width: 100%;
     font-size: 6.4rem;
     font-weight: 500;
     line-height: 1.1em;
@@ -48,7 +57,7 @@
     align-items: stretch;
     row-gap: 1.6rem;
     column-gap: 1.6rem;
-
+    width: auto;
     @include respond(large) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -90,6 +99,7 @@
     height: 6rem;
     border-radius: 0.6rem;
     font-size: 2rem;
+    width: auto;
 
     outline: none;
     &::placeholder {

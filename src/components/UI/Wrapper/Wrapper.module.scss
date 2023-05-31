@@ -1,0 +1,13 @@
+@import "./../../sass/abtracts/mixins";
+
+.wrapper {
+  max-width: 145rem;
+  padding: 15rem 1;
+  margin: 0 auto;
+  @include respond(large) {
+    padding: 10rem 1;
+  }
+  @include respond(phone) {
+    padding: 7.5rem 1;
+  }
+}
