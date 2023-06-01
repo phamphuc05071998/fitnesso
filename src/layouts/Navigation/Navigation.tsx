@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../../store/store";
-import Cart from "../Cart/Cart";
-import Button from "../UI/Button/Button";
+import Cart from "../../components/Cart/Cart";
+import Button from "../../components/UI/Button/Button";
 import { motion } from "framer-motion";
 import { logIn, logOut } from "../../store/authProvider";
-import { getCartItems, removeItemsFromCart } from "../../utils/cart";
-import { fetchItems, removeAllItems, removeItem } from "./../../store/cartProvider";
+import { getCartItems, removeItemsFromCart } from "./../../utils/cart";
+import { fetchItems, removeAllItems, removeItem } from "../../store/cartProvider";
 const Navigation: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);

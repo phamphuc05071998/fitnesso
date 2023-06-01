@@ -1,6 +1,7 @@
-@import "./../../components/sass/abtracts/variables";
-@import "./../../components/sass/abtracts/mixins";
-@import "./../../components/sass/abtracts/animation";
+@import "./../../../src/components/sass/abtracts/variables";
+@import "./../../../src/components/sass/abtracts/mixins";
+@import "./../../../src/components/sass/abtracts/animation";
+
 
 .header {
   background-color: rgba($color-white, 0.5);
@@ -28,8 +29,8 @@
     visibility: hidden;
     margin-left: auto;
     z-index: 2;
-    background-color: $color-background-2;
-   
+    background-color:transparent;
+
     &.clicked {
       background-color: $color-primary;
     }
@@ -49,12 +50,10 @@
     color: $color-primary;
     cursor: pointer;
     &.clicked {
-      background-color: $color-background-2;
-
-    color: $color-background-2;
-
+      background-color: rgba($color-white, 0.5);
+      color: rgba($color-white, 0.5);
     }
- 
+
     &::after,
     &::before {
       position: absolute;
@@ -96,13 +95,11 @@
       transform: translateX(100%);
       transition: all 0.3s;
       &.openNav {
-      
-          transform: translateX(0);
-        
+        transform: translateX(0);
       }
     }
     @include respond(phone) {
-        left: 0;
+      left: 0;
     }
   }
   &Link {
@@ -157,7 +154,7 @@
       cursor: pointer;
       padding: 0.3rem;
       box-sizing: content-box;
-      &:active{
+      &:active {
         background-color: rgba($color-primary, 0.2);
       }
     }
@@ -176,9 +173,9 @@
   right: 2rem;
   max-width: 48rem;
   min-width: 32rem;
-  border-radius: 1rem ;
+  border-radius: 1rem;
   box-shadow: 1rem 1rem 2rem rgba($color: #000000, $alpha: 0.6);
-  @include respond (phone) {
+  @include respond(phone) {
     position: fixed;
     top: 0;
     left: 0;
@@ -212,7 +209,6 @@
     font-size: 2.5rem;
     font-family: "Sato", sans-serif;
     font-weight: 400;
-
   }
   &Container {
     padding: 2rem 2rem 0 2rem;
@@ -221,8 +217,6 @@
   }
   &Checkout {
     padding: 2rem;
-   
-
   }
   &Sub {
     display: flex;
@@ -232,7 +226,7 @@
   }
   &Label {
     font-size: 1.4rem;
-    font-weight:300 ;
+    font-weight: 300;
     letter-spacing: 1px;
   }
   &Total {

@@ -30,7 +30,6 @@ const GallerySection = () => {
         <div className={styles.galleryImg}>
           <img src={img1} alt=""></img>
         </div>
-
         <div className={styles.galleryImg}>
           <img src={img2} alt=""></img>
         </div>
