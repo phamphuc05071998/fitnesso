@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <div className={styles.heroLabel}>HI I'M SANDRA LYONS</div>
                 <h1 className={styles.heroHeading}>Who can benefit from a fully custom online fitness plan & nutrition?</h1>
                 <p className={styles.heroText}>Literally everyone. I’m currently helping people from 12 to 60+ years old. Everyone is getting an adjusted program and a meal plan.</p>
-                <Button>Book a call</Button>
+                <Button href="about">Book a call</Button>
             </div>
             <div className={styles.heroImgContainer}>
                 

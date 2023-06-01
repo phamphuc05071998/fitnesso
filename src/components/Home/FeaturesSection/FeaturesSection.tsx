@@ -40,7 +40,7 @@ const FeaturesSection = () => {
           <HeadingSecondary primaryColor center>
             The journey to a healthier body starts right now
           </HeadingSecondary>
-          <Button>Online Coaching</Button>
+          <Button href="about">Online Coaching</Button>
         </div>
         {FeatureCardList.map(item => <FeatureCard key={item.id} title={item.title} img={item.img} description={item.description}/>)}
       </div>

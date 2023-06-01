@@ -28,10 +28,8 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const userStr = localStorage.getItem("user");
-
     if (userStr && token) {
       const user = JSON.parse(userStr);
-     
       dispatch(
         logIn({
           token: token,

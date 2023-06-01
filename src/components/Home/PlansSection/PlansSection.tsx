@@ -35,7 +35,7 @@ const PlansSection: React.FC<props> = ({
         <h2 className={headingClasses}>{title}</h2>
         <p className={textClasses}>{description}</p>
         <div className={styles.plansBtn}>
-          <Button white={primaryColor ? true : false}>{buttonTitle}</Button>
+          <Button href={`${primaryColor? "shop" :"free-workouts"}`} white={primaryColor ? true : false}>{buttonTitle}</Button>
         </div>
         <div className={styles.plansList}>
         {plansList.map((item) => (

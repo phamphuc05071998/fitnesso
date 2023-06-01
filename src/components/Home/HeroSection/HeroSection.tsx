@@ -43,7 +43,7 @@ const HeroSection = () => {
             started working with people all around and changing their lives
             forever.
           </p>
-          <Button>Online coaching</Button>
+          <Button href="about">Online coaching</Button>
         </div>
       </motion.div>
     </section>

@@ -26,7 +26,7 @@ const AboutSection = () => {
               <h5>03</h5> <div>Bachelors in nutrition</div>
             </li>
           </ul>
-          <Button>Schedule a call</Button>
+          <Button href="about">Schedule a call</Button>
         </div>
         <div className={styles.aboutImgContent}>
           <div className={styles.aboutImgContentBg}>&nbsp;</div>
@@ -57,7 +57,7 @@ const AboutSection = () => {
               <h5>03</h5> <div>Bachelors in nutrition</div>
             </li>
           </ul>
-          <Button>Schedule a call</Button>
+          <Button href="about">Schedule a call</Button>
         </div>
       </div>
     </section>
