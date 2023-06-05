@@ -1,17 +1,22 @@
-import React from "react";
+import React, {lazy} from "react";
 
-import Home, { getPlans } from "./Pages/Home";
+
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import About from "./Pages/About";
-import FreeWorkout from "./Pages/FreeWorkout";
-import Shop from "./Pages/Shop";
-import DetailFree, { loadDetailCourse } from "./Pages/DetaiFree";
-import Product from "./Pages/Product";
+
+import  { loadDetailCourse } from "./Pages/DetaiFree";
+
 import { loadDetailCourse as loader } from "./Pages/Product";
 import Authenticate from "./Pages/Authenticate";
-import { loader as loadFreeCourses } from "./Pages/FreeWorkout";
-import { loader as loadPaidCourse } from "./Pages/Shop";
+
+const Home = lazy(() => import('./Pages/Home') );
+const FreeWorkout  = lazy(() => import('./Pages/FreeWorkout'))
+// const Authenticate = lazy(() => import('./Pages/Authenticate'))
+const DetailFree = lazy(() => import('./Pages/DetaiFree'))
+const Product = lazy(() => import('./Pages/Product'))
+const Shop = lazy(() => import('./Pages/Shop'))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +25,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: getPlans},
+        loader: () => import('./Pages/Home').then((module) => module.getPlans()),
+      },
       {
         path: "/about",
         element: <About />,
@@ -31,12 +37,12 @@ const router = createBrowserRouter([
           {
             path: "",
             element: <FreeWorkout />,
-            loader: loadFreeCourses
+            loader: () => import('./Pages/FreeWorkout').then((module) => module.loader()),
           },
           {
             path: ":id",
             element: <DetailFree />,
-            loader: loadDetailCourse
+            loader: loadDetailCourse,
           },
         ],
       },
@@ -45,21 +51,21 @@ const router = createBrowserRouter([
         path: "/shop",
         children: [
           {
-            path:'',
-            element: <Shop/>,
-            loader: loadPaidCourse
+            path: "",
+            element: <Shop />,
+            loader: () => import('./Pages/Shop').then((module) => module.loader()),
           },
           {
-            path: ':id',
-            element: <Product/>,
-            loader: loader
-          }
-        ]
+            path: ":id",
+            element: <Product />,
+            loader: loader,
+          },
+        ],
       },
       {
-        path: '/auth/:mode',
-        element: <Authenticate/>
-      }
+        path: "/auth/:mode",
+        element: <Authenticate />,
+      },
     ],
   },
 ]);
